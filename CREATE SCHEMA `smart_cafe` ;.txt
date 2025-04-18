@@ -1,0 +1,64 @@
+CREATE SCHEMA `smart_cafe` ;
+
+
+CREATE TABLE `smart_cafe`.`customers` (
+  `Name` VARCHAR(100) NULL,
+  `Contact no.` INT NOT NULL,
+  PRIMARY KEY (`Contact no.`));
+
+
+ALTER TABLE `smart_cafe`.`customers` 
+CHANGE COLUMN `Contact no.` `Name` VARCHAR(100) NULL ,
+CHANGE COLUMN `Name` `Contact no.` INT NOT NULL ;
+ALTER TABLE `smart_cafe`.`customers` ALTER INDEX `PRIMARY` VISIBLE;
+
+
+INSERT INTO `smart_cafe`.`customers` (`Name`, `Contact no.`) VALUES ('Sweety', '01837783461');
+INSERT INTO `smart_cafe`.`customers` (`Name`, `Contact no.`) VALUES ('Suju', '01838748377');
+INSERT INTO `smart_cafe`.`customers` (`Name`, `Contact no.`) VALUES ('David', '01565765659');
+INSERT INTO `smart_cafe`.`customers` (`Name`, `Contact no.`) VALUES ('Messi', '01578454858');
+INSERT INTO `smart_cafe`.`customers` (`Name`, `Contact no.`) VALUES ('Kalapathan', '01846546546');
+INSERT INTO `smart_cafe`.`customers` (`Name`, `Contact no.`) VALUES ('Ronaldo', '01945564556');
+INSERT INTO `smart_cafe`.`customers` (`Name`, `Contact no.`) VALUES ('Eather', '01656546465');
+
+
+UPDATE `smart_cafe`.`customers` SET `Name` = 'pial', `Contact no.` = '1656546575' WHERE (`Contact no.` = '1656546665');
+UPDATE `smart_cafe`.`customers` SET `Name` = 'Covid', `Contact no.` = '1565787559' WHERE (`Contact no.` = '1565765659');
+
+
+CREATE TABLE `smart_cafe`.`manager` (
+  `M.ID NO` INT NOT NULL,
+  `Contact No` INT NULL,
+  `Name` VARCHAR(45) NULL,
+  PRIMARY KEY (`M.ID NO`));
+
+
+
+INSERT INTO `smart_cafe`.`manager` (`M.ID NO`, `Contact No`, `Name`) VALUES ('4332344', '0182378932', 'Kabir khan');
+
+
+CREATE TABLE `smart_cafe`.`chef` (
+  `C_ID` INT NOT NULL,
+  `Contact_no` INT NOT NULL,
+  `Name` VARCHAR(45) NULL,
+  PRIMARY KEY (`C_ID`));
+
+
+
+INSERT INTO `smart_cafe`.`chef` (`C_ID`, `Contact_no`, `Name`) VALUES ('5874', '01837872387', 'Dipu');
+INSERT INTO `smart_cafe`.`chef` (`C_ID`, `Contact_no`, `Name`) VALUES ('3453', '01659666565', 'emu');
+INSERT INTO `smart_cafe`.`chef` (`C_ID`, `Contact_no`, `Name`) VALUES ('3544', '01736732636', 'shurovi');
+INSERT INTO `smart_cafe`.`chef` (`C_ID`, `Contact_no`, `Name`) VALUES ('7346', '01684546544', 'sara');
+
+
+
+
+
+
+
+
+
+
+
+
+
