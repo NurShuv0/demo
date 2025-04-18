@@ -20,7 +20,7 @@ int main()
         {
             cout << "Yes" << nl;
         }
-        else
+        else 
         {
             cout << "No" << nl;
         }
